@@ -15,7 +15,7 @@ namespace ONPE.WEB.Controllers
         {
             return RedirectToAction("Login");
         }
-
+        //BKGLI-003
         public ActionResult Dashboard()
         {
             DashboardViewModel objViewModel = new DashboardViewModel();
@@ -27,7 +27,7 @@ namespace ONPE.WEB.Controllers
             LstCandidatoViewModel objViewModel = new LstCandidatoViewModel();
             return View(objViewModel);
         }
-
+        //BKLGI-005
         [HttpGet]
         public ActionResult AddEditCandidato(int? CandidatoId)
         {
@@ -37,7 +37,7 @@ namespace ONPE.WEB.Controllers
         }
 
         [HttpPost]
-
+ //BKLGI-006
         public ActionResult AddEditCandidato(AddEditCandidatoViewModel objViewModel)
         {
             try
@@ -71,7 +71,7 @@ namespace ONPE.WEB.Controllers
                 return View(objViewModel);
             }
         }
-
+ //BKLGI-006
         public ActionResult AddEditPartidoPolitico(int? PartidoPoliticoId)
         {
             AddEditPartidoPoliticoViewModel objViewModel = new AddEditPartidoPoliticoViewModel();
@@ -80,6 +80,7 @@ namespace ONPE.WEB.Controllers
         }
 
         [HttpPost]
+         //BKLGI-005
         public ActionResult AddEditPartidoPolitico(AddEditPartidoPoliticoViewModel objViewModel)
         {
             try
@@ -111,7 +112,7 @@ namespace ONPE.WEB.Controllers
 
              
         }
-
+ //BKLGI-005
         public ActionResult AddEditDistrito(int? DistritoId)
         {
             AddEditDistritoViewModel objViewModel = new AddEditDistritoViewModel();
@@ -120,6 +121,7 @@ namespace ONPE.WEB.Controllers
         }
 
         [HttpPost]
+         //BKLGI-005
         public ActionResult AddEditDistrito(AddEditDistritoViewModel objViewModel)
         {
             try
@@ -152,7 +154,7 @@ namespace ONPE.WEB.Controllers
 
         }
 
-
+ //BKLGI-005
         public ActionResult EliminarDistrito(int? DistritoId)
         {
             AddEditDistritoViewModel objViewModel = new AddEditDistritoViewModel();
@@ -161,6 +163,7 @@ namespace ONPE.WEB.Controllers
         }
 
         [HttpPost]
+         //BKLGI-005
         public ActionResult EliminarDistrito(int DistritoId )
         {
             try
@@ -186,13 +189,13 @@ namespace ONPE.WEB.Controllers
 
         }
 
-
+ //BKLGI-005
         public ActionResult LstDistrito()
         {
             LstDistritoViewModel objViewModel = new LstDistritoViewModel();
             return View(objViewModel);
         }
-
+ //BKLGI-005
         public ActionResult LstPartidoPolitico()
         {
             LstPartidoPoliticoViewModel objViewModel = new LstPartidoPoliticoViewModel();
